@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notionメッセージウィジェット</title>
-    <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notionメッセージウィジェット</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        font-size: 24px;
+        margin: 20px;
+        color: black; /* デフォルト（ライトモード） */
+    }
+
+    /* PCの設定がダークモードの場合、文字色を白に変更 */
+    @media (prefers-color-scheme: dark) {
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            font-size: 24px;
-            margin: 20px;
+            color: white;
         }
-    </style>
+    }
+</style>
 </head>
 <body>
     <div id="message"></div>
