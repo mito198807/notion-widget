@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notionメッセージウィジェット</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            font-size: 24px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="message"></div>
+
+    <script>
+        function getMessage() {
+            const messages = {
+                0: "日曜日：夢なき者に成功なし",
+                1: "月曜日：今がんばらなければ、いつがんばる",
+                2: "火曜日：才能は、「生まれ持ったモノ」でも何でもなく、「挑戦した数」です",
+                3: "水曜日：「努力したこと」にこだわると上にいけない",
+                4: "木曜日：1つ1つ積み重ねていければ、必ず成長できる",
+                5: "金曜日：今日できることを明日にのばすな",
+                6: "土曜日：いいあんばい"
+            };
+
+            const now = new Date();
+            const day = now.getDay();
+            document.getElementById("message").innerText = messages[day];
+        }
+
+        getMessage();
+        setInterval(getMessage, 3600000); // 1時間ごとに更新
+    </script>
+</body>
+</html>
